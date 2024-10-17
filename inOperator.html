@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inOperator</title>
+</head>
+<body>
+    <script>
+
+    const orang = {
+        nama : "muhammad rezza",
+        hobi : "main game",
+        pacar : undefined
+    }
+    let hasil = "nama" in orang;
+
+    if(hasil && typeof orang.pacar == "undefined"){
+        console.info(`Selamat datang wak ${orang.nama}`);
+    }else{  
+        console.info(`no name banget njir`);
+    }
+    console.info(hasil); // true
+    </script>
+</body>
+</html>
