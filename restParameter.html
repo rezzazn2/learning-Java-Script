@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+<body>
+    <script>
+        // Rest Parameter adalah fitur dimana kita bisa mengirim data sebanyak-banyak nya pada satu parameter, dan secara otomatis akan di konversi menjadi Array Untuk membuat rest parameter, ada ketentuannya 
+        // Rest parameter hanya boleh ada satu di function, tidak boleh lebih dari satu 
+        // Rest parameter hanya boleh berada di posisi paling akhir, tidak boleh di depan atau di tengah, kecuali memang cuma ada 1 parameter 
+        // Di bahasa pemrograman lain, ada juga yang bilang ini adalah variable argument
+
+        function sum(nama, ...datas){
+            let total= 0;
+            for(const data of datas){
+                total += data;
+            }
+            console.info(`total dari ${nama} adalah : ${total}`);
+        }
+
+        sum("nangka", 10,34,54,34);
+        const datas = [2,4,5,3,75,3];
+        sum("aceh", ...datas);
+
+    </script>
+</body>
+</html>
