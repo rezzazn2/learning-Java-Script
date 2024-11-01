@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        // Destructuring adalah fitur yang bisa digunakan untuk membongkar value-value di array atau object ke dalam variable-variable 
+        // Fitur ini sangat mempermudah kita ketika ingin mengambil data dari array atau object tanpa harus melakukan pengambilan data satu persatu
+
+        // Destructturing Array
+       {
+            const nama = ["ilham", "kurniawan", "dedi", "corbuzier", "mimi", "momo"];
+            const [first, second, third, ...others ] = nama;
+
+            console.info(first);
+            console.info(second);
+            console.info(third);
+            console.info(others[1]);
+       }
+
+
+        
+        // Destructuring Object
+       {
+            const person = {
+                firstName : "Walter",
+                LastName : "White",
+                alias : "Haisenberg",
+                adress : {
+                    street : "Prancis (parapatan ciamis)",
+                    city : "Ciamis",
+                    country : "Indonesia"
+                },
+                hoby : ["drawing", "game", "chemical things"]
+            }
+            
+            const {firstName, lastName, alias, adress : {street, city, country}, ...others} = person;
+            
+            console.log(firstName);
+            console.log(street);
+            console.log(city);
+            console.log(country);
+            console.log(others);
+        }
+        
+        // Destructuring di Parameter
+        {
+            function showPerson({firstName, lastName, alias}){
+                console.log(firstName);
+                console.log(lastName);
+                console.log(alias);
+            }
+
+            const person = {
+                firstName : "Walter",
+                lastName : "White",
+                alias : "Haisenberg"
+            }
+
+            showPerson(person);
+        }
+    </script>
+</body>
+</html>
