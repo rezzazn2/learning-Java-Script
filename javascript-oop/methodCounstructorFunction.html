@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method in Constructor Function</title>
+ </head>
+ <body>
+    <script>
+        function Person(){
+            this.firstName = "";
+            this.lastName = "";
+            this.sayhello = function(name){
+                console.log(`Hello ${name}, my name is ${this.lastName}`)
+            }
+        }
+
+        const rezza = new Person
+        rezza.firstName = "Muhammad";
+        rezza.lastName = "Rezza";
+        rezza.sayhello("Haisenberg");
+    </script>
+ </body>
+ </html>
