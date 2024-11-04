@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Class Field</title>
+</head>
+<body>
+    <script>
+        // Jika kita tambahkan static dalam class field, secara otomatis field tersebut bukan lagi milik instance object, melainkan milik class nya itu sendiri 
+        // Biasanya static digunakan jika kita ingin membuat utility field atau function 
+        // Cara mengakses static class field pun tidak lagi lewat object, melainkan lewat class nya 
+        // Static class field bisa diartikan sifatnya global, tidak peduli diakses dimana atau siapa yang mengakses, hasilnya akan sama
+
+        class ContractWithDevil{
+            static devilName = "War Devil";
+            static payment = "nail";
+
+            static makeWeapon(sacrifice){
+                console.log("you make a weapon with " + sacrifice);
+            }
+        }
+
+        const asaMitaka = new ContractWithDevil();
+
+        console.log(ContractWithDevil.devilName);
+
+    </script>
+</body>
+</html>
