@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>membuat Class Error</title>
+</head>
+<body>
+    <script>
+
+        class ValidationError extends Error{
+            constructor(message, field){
+                super(message);
+                this.field = field;
+            }
+        }
+
+        class Math{
+            static sum(...nums){
+                if(nums.length === 0){
+                    throw new ValidationError("tolong masukan nilai ke parameter", "numbers");
+                }else{
+                    let total = 0;
+                    for(const num of nums){
+                        total += num;
+                    }
+                    console.log(total);
+                }
+            }
+        }
+
+
+
+        try{
+            Math.sum();
+            console.log("aman");
+        }catch(error){
+            if(error instanceof ValidationError){
+                console.error(`Terjadi Error di field : ${error.field}, karena : ${error.message}`)
+            }else{
+                console.error("Error wak : " + error.message);
+            }
+        }finally{
+            console.log("program selesai");
+        }
+
+        console.info("muowwrah cik");
+    </script>
+</body>
+</html>

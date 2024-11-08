@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    <script>
+        class Math{
+            static sum(...nums){
+                if(nums.length === 0){
+                    throw new Error("tolong masukan nilai ke parameter");
+                }else{
+                    let total = 0;
+                    for(const num of nums){
+                        total += num;
+                    }
+                    console.log(total);
+                }
+            }
+        }
+
+
+
+        try{
+            Math.sum();
+            console.log("aman");
+        }catch(error){
+            console.error("Error wak : " + error.message);
+        }finally{
+            console.log("program selesai");
+        }
+
+        console.info("muowwrah cik");
+    </script>
+</body>
+</html>

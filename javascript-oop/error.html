@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+</head>
+<body>
+    <script>
+        class Math{
+            sum(...nums){
+                if(nums.length === 0){
+                    throw new Error("tolong masukan nilai ke parameter");
+                }else{
+                    let total = 0;
+                    for(const num of nums){
+                        total += num;
+                    }
+                    console.log(total);
+                    console.log(nums.length);
+                }
+            }
+        }
+
+
+        const math = new Math()
+
+        math.sum();
+    </script>
+</body>
+</html>
