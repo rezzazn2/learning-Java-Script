@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript getElementsByName Demo</title>
+</head>
+
+<body>
+   <p>Berikan nilai untuk program saya!</p>
+
+   <p>
+       <label for="sangat-bagus">
+            <input type="radio" name="pilihan" id="sangat-bagus" value="Sangat Bagus">Sangat Bagus
+       </label>
+       <label for="bagus">
+            <input type="radio" name="pilihan" id="bagus" value="Bagus">Bagus
+       </label>
+       <label for="biasa">
+            <input type="radio" name="pilihan" id="biasa" value="Biasa Saja">Biasa Saja
+       </label>
+       <label for="sangat-bagus">
+            <input type="radio" name="pilihan" id="jelek" value="jelek">Jelek
+       </label>
+   </p>
+
+   <p>
+          <button type="button" id="btn-nilai">Submit</button>
+   </p>
+
+   <p id="keluaran"></p>
+</body>
+
+<script>
+    const btnNilai = document.getElementById('btn-nilai');
+    const keluaran = document.getElementById('keluaran');
+    
+
+    btnNilai.addEventListener('click', () =>{
+        const pilihan = document.getElementsByName('pilihan');
+        
+        
+        pilihan.forEach((pilih) => {
+            if(pilih.checked){
+                console.log(pilih.value)
+                keluaran.innerText = `Kamu memilih : ${pilih.value}`;
+            }
+        })
+    });
+</script>
+
+</html>
