@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementByTagName</title>
+</head>
+<body>
+    <h1>Demo getElementByTagName JavaScript</h1>
+    <h2>heading 1</h2>
+    <p>paraghraph 1, Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum molestiae ipsam dolorum voluptatem nostrum autem repudiandae nam qui non cupiditate vitae a consequatur quaerat alias nesciunt fugiat, id doloremque suscipit. Error.
+    </p>
+    <h2>heading 2</h2>
+    <p>paraghraph 2, Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum molestiae ipsam dolorum voluptatem nostrum autem repudiandae nam qui non cupiditate vitae a consequatur quaerat alias nesciunt fugiat, id doloremque suscipit. Error.
+    <h2>heading 3</h2>
+    <p>paraghraph 3, Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum molestiae ipsam dolorum voluptatem nostrum autem repudiandae nam qui non cupiditate vitae a consequatur quaerat alias nesciunt fugiat, id doloremque suscipit. Error.
+
+        <button id="btn-hitung">hitung h2</button>
+</body>
+
+<script>
+    const btnHitung = document.getElementById('btn-hitung');
+    btnHitung.addEventListener( 'click', ()=>{
+        const h2 = document.getElementsByTagName('h2');
+        alert(`Jumlah Tag h2 di halaman ini : ${h2.length}`);
+    })
+</script>
+</html>
