@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Get Child Elements</title>
+</head>
+<body>
+  <ul id="menu">
+    <li class="first">Home</li>
+    <li>Products</li>
+    <li class="current">Customer Support</li>
+    <li>Careers</li>
+    <li>Investors</li>
+    <li>News</li>
+    <li class="last">About Us</li>
+  </ul>
+</body>
+<script>
+    const parent = document.getElementById('menu');
+
+// get the first child element 
+{
+    // return text node
+    const firstChild = parent.firstChild;
+    console.log(firstChild);
+
+    // return element node
+    const firstChildElement = parent.firstElementChild
+    console.log(firstChildElement);
+}
+
+// get the last child Element
+{
+    // return text node
+    const lastChild =  parent.lastChild;
+    console.log(lastChild);
+
+    // return element node
+    const lastElementChild = parent.lastElementChild
+    console.log(lastElementChild);
+
+}
+
+// get all child element
+{
+  // any node type
+  console.log(parent.childNodes)
+
+  // only element node
+  console.log(parent.children)
+}
+
+
+</script>
+</html>

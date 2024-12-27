@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JS CreateElement Demo</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+    </ul>
+</body>
+    <script>
+        
+        // membuat div baru
+        {
+            let div = document.createElement('div');
+            div.id = "first"
+            div.classname = "container"
+        
+            // menambah text
+            let text = document.createTextNode('Yaudah sih, ngapain juga');
+            div.appendChild(text);
+
+            // menambabh elemen kedalam nya
+            let h2 = document.createElement('h2');
+            h2.innerText = "Disaat pendukungmu oke gas oke gas"
+
+            div.appendChild(h2);
+
+            // menambah div kedalam dokumen
+            document.body.appendChild(div);
+        }
+
+        // membuat sebuah list
+        {
+            const menu = document.getElementById('menu');
+
+            let li = document.createElement('li');
+            li.textContent = "Beranda";
+            menu.appendChild(li);
+
+            li = document.createElement('li');
+            li.textContent = "Tentang Kami";
+
+            menu.appendChild(li);
+        }   
+
+        // membuat element script
+        {
+
+            // let script = document.createElement('script');
+            // script.src = "/omke.js";
+    
+            // document.body.appendChild(script);
+            function loadJS(url) {
+                let script = document.createElement('script');
+                script.src = url;
+                script.async
+                document.body.appendChild(script);
+            }
+
+            loadJS('/omke.js');
+        }
+        
+    </script>
+</html>
