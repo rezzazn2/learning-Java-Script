@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Fragment</title>
+</head>
+<body>
+        <ul id="list">
+
+        </ul>
+    
+</body>
+    <script>
+        let languages = ["C", "C++", "C#", "Pascal", "swift", "Java", "Kotlin", "PHP", "Java Script", "Rust", "Ruby", "Golang"];
+
+        let list = document.getElementById('list');
+        
+        let fragment = new DocumentFragment();
+
+        languages.forEach((language) => {
+            let li = document.createElement('li');
+            li.innerHTML = language;
+            fragment.appendChild(li);
+        })
+
+        list.appendChild(fragment);
+    </script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner HTML</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>About Us</li>
+    </ul>
+</body>
+<script>
+    let menu = document.getElementById('menu');
+    console.log(menu.innerHTML);
+    
+    menu.innerHTML = '<h1>ELement have been changed</h1>';
+    console.log(menu.innerHTML);
+    
+</script>
+</html>
