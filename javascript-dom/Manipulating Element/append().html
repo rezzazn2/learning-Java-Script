@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append</title>
+</head>
+<body>
+    <ul id="app">
+        <li>JavaScript</li>
+    </ul>
+
+    <div id="gams"></div>
+
+    <script>
+        // 1) Using the append() method to append an element example
+        let langs = ['TypeScript','HTML','CSS'];
+
+        let app = document.getElementById('app');
+
+        let items = langs.map((lang) =>{
+            let item = document.createElement('li');
+            item.innerHTML = lang;
+
+            return item;
+        });
+
+        app.append(...items);
+
+        // 2) Using the append() method to append text to an element example
+
+        let gams = document.getElementById('gams');
+        app.append('append() a Text Demo');
+
+
+    </script>
+</body>
+
+
+</html>

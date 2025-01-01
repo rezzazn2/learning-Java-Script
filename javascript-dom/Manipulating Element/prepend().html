@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepend method</title>
+</head>
+<body>
+    <ul id="app">
+        <li>HTML</li>
+    </ul>
+
+    <div id="gams"></div>
+    <script>
+        // 1) Using the prepend() method to prepend an element example
+        let app = document.querySelector('#app');
+
+        let langs = ['CSS','JavaScript','TypeScript'];
+
+        let nodes = langs.map(lang => {
+            let li = document.createElement('li');
+            li.textContent = lang;
+            return li;
+        });
+
+        app.prepend(...nodes);
+
+        // 2) Using the prepend() method to prepend text to an element example
+        let gams = document.querySelector('#gams');
+        gams.prepend('prepend() Text Demo');
+
+        console.log(gams.textContent);
+    </script>
+</body>
+</html>
