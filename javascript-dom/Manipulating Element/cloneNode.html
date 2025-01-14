@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript cloneNode() Demo</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>Services</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+    <script>
+        let menu = document.getElementById('menu');
+        let menuMobile = menu.cloneNode(true);
+        menuMobile.id = "menu-mobile";
+        document.body.append(menuMobile);
+    </script>
+</body>
+</html>
